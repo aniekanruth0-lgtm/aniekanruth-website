@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MyPlace&Bar - The finest authentic African cuisine in Perth, Australia. Experience traditional African flavors with modern twists in the heart of Perth CBD.">
+    <meta name="keywords" content="restaurant, bar, cafe, food, dining, MyPlace&Bar, Perth, Australia, African cuisine, authentic African food, traditional African dishes">
+    <meta name="theme-color" content="#8b4513">
+    <title>MyPlace&Bar - Restaurant & Lounge in Perth, Australia</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <span class="logo-text">MYPLACE<span class="logo-ampersand">&</span>BAR</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#menu" class="nav-link">Menu</a></li>
+                        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                        <li><a href="#order" class="nav-link">Order</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to MyPlace&Bar</h1>
+            <p class="hero-subtitle">The Finest Authentic African Cuisine in Perth</p>
+            <button class="btn btn-primary" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">Explore Our Menu</button>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Menu / Product Gallery Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Menu</h2>
+                <p class="section-subtitle">Authentic African flavors with modern Australian twists</p>
+            </div>
+
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="appetizers">Appetizers</button>
+                <button class="filter-btn" data-filter="mains">Main Courses</button>
+                <button class="filter-btn" data-filter="drinks">Beverages</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+            </div>
+
+            <div class="menu-gallery">
+                <!-- Appetizers -->
+                <div class="menu-card" data-category="appetizers">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1627873649417-af36141a486f?w=400&h=300&fit=crop" alt="Crispy Calamari">
+                        <span class="menu-badge">Popular</span>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Crispy Calamari</h3>
+                        <p class="menu-card-description">Golden fried squid with lemon aioli and fresh herbs</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$12.99</span>
+                            <button class="btn-add-to-order" onclick="addToOrder('Crispy Calamari', 12.99)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="appetizers">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1596040995176-49c16eb6c0a9?w=400&h=300&fit=crop" alt="Cheese Board">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Artisan Cheese Board</h3>
+                        <p class="menu-card-description">Selection of 5 premium cheeses with cured meats and crackers</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$18.99</span>
+                            <button class="btn-add-to-order" onclick="addToOrder('Artisan Cheese Board', 18.99)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Courses -->
+                <div class="menu-card" data-category="mains">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop" alt="Jollof Rice">
+                        <span class="menu-badge">Chef's Pick</span>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Jollof Rice with Chicken</h3>
+                        <p class="menu-card-description">Authentic West African rice dish with tender chicken, tomatoes, and aromatic spices</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$22.99</span>
+                            <button class="btn-add-to-order" onclick="addToOrder('Jollof Rice with Chicken', 22.99)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="mains">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1588168657692-02eac73d95ca?w=400&h=300&fit=crop" alt="Bobotie">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Cape Malay Bobotie</h3>
+                        <p class="menu-card-description">South African spiced minced beef casserole topped with golden egg custard</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$24.99</span>
+                            <button class="btn-add-to-order" onclick="addToOrder('Cape Malay Bobotie', 24.99)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="mains">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop" alt="Lamb Tagine">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Lamb Tagine</h3>
+                        <p class="menu-card-description">Slow-cooked Moroccan lamb with apricots, almonds, and couscous</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$26.99</span>
+                            <button class="btn-add-to-order" onclick="addToOrder('Lamb Tagine', 26.99)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beverages -->
+                <div class="menu-card" data-category="drinks">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1608032158040-39f37b50e90c?w=400&h=300&fit=crop" alt="Rooibos Tea">
+                        <span class="menu-badge">Signature</span>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Cape Rooibos Tea</h3>
+                        <p class="menu-card-description">South African red tea with honey and lemon, served hot or iced</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$4.99</span>
+                            <button class="btn-add-to-order" onclick="addToOrder('Cape Rooibos Tea', 4.99)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="drinks">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&h=300&fit=crop" alt="Hibiscus Tea">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Hibiscus Zobo</h3>
+                        <p class="menu-card-description">Nigerian hibiscus tea with pineapple and ginger, naturally sweet</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$5.99</span>
+                            <button class="btn-add-to-order" onclick="addToOrder('Hibiscus Zobo', 5.99)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="drinks">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1585518419759-3a7ed39c3faa?w=400&h=300&fit=crop" alt="African Beer">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Castle Lager</h3>
+                        <p class="menu-card-description">Premium South African beer with smooth malt character</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$7.99</span>
+                            <button class="btn-add-to-order" onclick="addToOrder('Castle Lager', 7.99)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-card" data-category="desserts">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop" alt="Malva Pudding">
+                        <span class="menu-badge">Must Try</span>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Malva Pudding</h3>
+                        <p class="menu-card-description">South African apricot sponge cake with warm butter sauce</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$7.99</span>
+                            <button class="btn-add-to-order" onclick="addToOrder('Malva Pudding', 7.99)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="desserts">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&h=300&fit=crop" alt="Baklava">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">Moroccan Baklava</h3>
+                        <p class="menu-card-description">North African layered pastry with honey, nuts, and rose water</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$6.99</span>
+                            <button class="btn-add-to-order" onclick="addToOrder('Moroccan Baklava', 6.99)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="desserts">
+                    <div class="menu-card-image">
+                        <img src="https://images.unsplash.com/photo-1557351021-8d3e5d02a122?w=400&h=300&fit=crop" alt="Coconut Rice Pudding">
+                    </div>
+                    <div class="menu-card-content">
+                        <h3 class="menu-card-title">East African Rice Pudding</h3>
+                        <p class="menu-card-description">Creamy coconut rice pudding with cardamom and tropical fruits</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$5.99</span>
+                            <button class="btn-add-to-order" onclick="addToOrder('East African Rice Pudding', 5.99)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Guests Say</h2>
+                <p class="section-subtitle">Real experiences from our valued customers</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop" alt="Sarah Johnson" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Sarah Johnson</h4>
+                            <span class="testimonial-title">Food Blogger</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-text">"MyPlace&Bar has introduced me to the most incredible African flavors! The Jollof Rice is authentic and bursting with flavor. A true celebration of African cuisine in Perth!"</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop" alt="Michael Chen" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Michael Chen</h4>
+                            <span class="testimonial-title">Restaurant Critic</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-text">"The Cape Malay Bobotie is a masterpiece! I've traveled extensively in Africa and this captures the authentic South African essence perfectly. Outstanding!"</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop" alt="Emily Rodriguez" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Emily Rodriguez</h4>
+                            <span class="testimonial-title">Regular Guest</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-text">"As someone who loves exploring world cuisines, MyPlace&Bar's African menu is exceptional. The tagine and the Rooibos tea transport me straight to Morocco and South Africa!"</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop" alt="James Williams" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">James Williams</h4>
+                            <span class="testimonial-title">Business Owner</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-text">"Perfect venue for our quarterly team celebrations. The Malva Pudding is heavenly, and the Castle Lager pairs beautifully with the African dishes. Best African restaurant in Perth!"</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop" alt="Amanda Martinez" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Amanda Martinez</h4>
+                            <span class="testimonial-title">Event Planner</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-text">"Hosted my sister's birthday here last month. The team accommodated all our requests, the African menu was a hit, and guests are still talking about the Baklava and Hibiscus tea!"</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop" alt="David Thompson" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">David Thompson</h4>
+                            <span class="testimonial-title">Wine Enthusiast</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-text">"Their beverage pairing recommendations are excellent. The Rooibos tea with Malva Pudding is divine! The sommelier really knows how to enhance African culinary experiences!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order" class="order-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Quick Order</h2>
+                <p class="section-subtitle">Place your order via WhatsApp</p>
+            </div>
+
+            <div class="order-container">
+                <div class="order-form-wrapper">
+                    <form id="orderForm" class="order-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name *</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 123-4567" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Special Requests</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="3" placeholder="Any allergies or special requests?"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Selected Items</label>
+                            <div id="orderItems" class="order-items-list">
+                                <p style="color: #999; font-size: 14px;">Click + on menu items to add them to your order</p>
+                            </div>
+                        </div>
+
+                        <div class="order-total">
+                            <span>Total: </span>
+                            <span id="totalPrice">$0.00</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span>Send Order via WhatsApp</span>
+                            <span class="whatsapp-icon">💬</span>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="order-info">
+                    <div class="info-card">
+                        <span class="info-icon">⏱️</span>
+                        <h4>Delivery Time</h4>
+                        <p>30-45 minutes</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-icon">📍</span>
+                        <h4>Service Area</h4>
+                        <p>Within 5 km radius</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-icon">💳</span>
+                        <h4>Payment</h4>
+                        <p>Cash or Online</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-icon">📞</span>
+                        <h4>Direct Call</h4>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3 class="newsletter-title">Stay Updated</h3>
+                    <p class="newsletter-subtitle">Subscribe to our newsletter for exclusive offers, new menu items, and special events</p>
+                </div>
+                <form id="newsletterForm" class="newsletter-form">
+                    <div class="newsletter-input-group">
+                        <input type="email" id="newsletter-email" name="email" class="newsletter-input" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    </div>
+                    <p class="newsletter-message" id="newsletterMessage"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 class="footer-title">MyPlace<span class="logo-ampersand">&</span>Bar</h4>
+                    <p class="footer-description">Authentic African cuisine in Perth, Australia. Celebrating the rich culinary heritage of Africa with modern Australian hospitality. Experience the finest flavors from across the continent.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h5 class="footer-subtitle">Hours</h5>
+                    <ul class="footer-list">
+                        <li>Mon - Thu: 10 AM - 11 PM</li>
+                        <li>Fri - Sat: 10 AM - 1 AM</li>
+                        <li>Sunday: 11 AM - 11 PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h5 class="footer-subtitle">Contact</h5>
+                    <ul class="footer-list">
+                        <li><a href="tel:+61455509191">📞 +61 455 509 191</a></li>
+                        <li><a href="mailto:info@myplacebar.com.au">📧 info@myplacebar.com.au</a></li>
+                        <li>📍 585 Hay Street, Perth WA 6000, Australia</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h5 class="footer-subtitle">Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">f</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+                        <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 MyPlace&Bar. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chatbox -->
+    <div id="chatbox" class="chatbox">
+        <div class="chatbox-header">
+            <div class="chatbox-avatar">
+                <span>🤖</span>
+            </div>
+            <div class="chatbox-info">
+                <h4>MyPlace&Bar Assistant</h4>
+                <span class="chatbox-status">Online</span>
+            </div>
+            <button id="chatbox-close" class="chatbox-close">×</button>
+        </div>
+
+        <div id="chatbox-messages" class="chatbox-messages">
+            <div class="message bot-message">
+                <div class="message-avatar">
+                    <span>🤖</span>
+                </div>
+                <div class="message-content">
+                    <p>Hi there! 👋 I'm your MyPlace&Bar assistant. How can I help you today?</p>
+                    <div class="message-time">Just now</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chatbox-input-area">
+            <div class="chatbox-suggestions">
+                <button class="suggestion-btn" onclick="sendSuggestion('What are your opening hours?')">Opening Hours</button>
+                <button class="suggestion-btn" onclick="sendSuggestion('Do you take reservations?')">Reservations</button>
+                <button class="suggestion-btn" onclick="sendSuggestion('What\'s your address?')">Location</button>
+                <button class="suggestion-btn" onclick="sendSuggestion('Tell me about your menu')">Menu Info</button>
+            </div>
+            <div class="chatbox-input-container">
+                <input type="text" id="chatbox-input" placeholder="Type your message..." maxlength="200">
+                <button id="chatbox-send" class="chatbox-send-btn">📤</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbox Toggle Button -->
+    <button id="chatbox-toggle" class="chatbox-toggle">
+        <span class="chatbox-toggle-icon">💬</span>
+        <span class="chatbox-toggle-text">Chat</span>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
