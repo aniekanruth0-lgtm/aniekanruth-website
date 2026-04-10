@@ -1,5 +1,4 @@
-✅ **Responsive Design** - Works perfectly on mobile, tablet, and desktop  
-✅ **Modern Hero Sec# 🍷 MyPlace&Bar - Modern Restaurant Website - Perth, Australia
+# 🍷 MyPlace&Bar - Modern Restaurant Website - Perth, Australia
 
 Welcome to your professional restaurant website! This is a fully responsive, modern web application built with vanilla HTML, CSS, and JavaScript.
 
@@ -10,7 +9,9 @@ Welcome to your professional restaurant website! This is a fully responsive, mod
 **MyPlace&Bar** is a sophisticated restaurant website in Perth, Australia featuring:
 
 ✅ **AI Chatbox** - Intelligent chatbot for customer inquiries  
-✅ **AI Chatbox** - Intelligent chatbot for customer inquiries  tion** - Eye-catching welcome with background animation  
+✅ **AI Chatbox** - Intelligent chatbot for customer inquiries  
+✅ **Responsive Design** - Works perfectly on mobile, tablet, and desktop  
+✅ **Modern Hero Section** - Eye-catching welcome with background animation  
 ✅ **Product Gallery** - 12 menu items with filtering (Appetizers, Mains, Drinks, Desserts)  
 ✅ **Customer Testimonials** - 6 authentic reviews with ratings  
 ✅ **Interactive Order Form** - Add items and submit orders via WhatsApp  
